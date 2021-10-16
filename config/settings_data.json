@@ -99,7 +99,7 @@
           "back-to-top-button-enabled": true,
           "smooth-scroll-enabled": true,
           "button-color": "#990055",
-          "back-to-top-button-position": "bottom-left"
+          "back-to-top-button-position": "bottom-center"
         }
       }
     },
