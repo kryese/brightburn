@@ -1,8 +1,8 @@
 {
     "sections": {
-        "main": {
-            "type": "main-page-faqs"
-        }
+      "main": {
+        "type": "main-page-faq"
+      }
     },
     "order": ["main"]
-}
+  }

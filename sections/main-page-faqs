@@ -15,29 +15,10 @@
 
 {% schema %}
 {
-  "name": "FAQ page",
+  "name": "FAQs Page",
   "tag": "section",
-  "class": "spaced-section",
-  "blocks": [
-  {
-      "name": "FAQ item",
-      "type": "faq",
-      "settings": [
-      {
-              "type": "text",
-              "id": "question",
-              "label": "Question",
-              "default": "Do you have a question",
-          },
-          {
-            "type": "richtext",
-            "id": "answer",
-            "label": "Answer",
-            "default": "<p>I have an answer</p>",
-        },
-      
-      ]
-  }
-  ]
+  "class": "spaced-section"
 }
 {% endschema %}
+
+Code language: HTML, XML (xml)
