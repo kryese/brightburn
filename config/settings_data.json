@@ -54,10 +54,11 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo_width": 100,
-          "logo_position": "middle-left",
+          "logo": "shopify:\/\/shop_images\/Untitled_Facebook_Cover_1200_x_676_px_700_x_394_px_355_x_200_px_275_x_200_px_275_x_100_px.png",
+          "logo_width": 250,
+          "logo_position": "top-center",
           "menu": "main-menu",
-          "show_line_separator": true,
+          "show_line_separator": false,
           "enable_sticky_header": true
         }
       },
