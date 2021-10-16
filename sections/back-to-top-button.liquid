@@ -1,0 +1,124 @@
+{% if section.settings.back-to-top-button-enabled %}
+<button id="back-to-top-button" class="{{section.settings.back-to-top-button-position}}" title="Back to Top">Back To Top</button>
+{% endif %}
+
+<style>
+    {% if section.settings.smooth-scroll-enabled %}
+    html {
+        scroll-behavior: smooth;
+    }
+    {% endif %}
+
+
+    #back-to-top-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: {{section.settings.button-color}};
+    }
+
+.bottom-left {
+    left: 30px;
+}
+.bottom-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bottom-right {
+    right: 30px;
+}
+
+#back-to-top-button:hover {
+    background-color: #D9042B;
+}
+</style>
+
+
+<script>  
+    
+    var backToTopFunction = function() {
+            var backToTopButton = document.getElementById("back-to-top-button");
+            backToTopButton.addEventListener("click", backToTop);
+      
+            window.onscroll = function() {
+                scrollFunction()
+            };
+    
+            function scrollFunction() {
+                if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            }
+    
+            function backToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        }
+    
+    //  reload JS on section update 
+    document.addEventListener("shopify:section:load", function(event) {
+        backToTopFunction();
+    });
+      
+    // load JS on page load
+    backToTopFunction();
+      
+    </script>
+
+{% schema %}
+{
+    "name": "Scroll To Top Button",
+    "settings": [
+    {
+        "type": "checkbox",
+        "id": "back-to-top-button-enabled",
+        "default": true,
+        "label": "Enable back to top button"
+    },
+    {
+        "type": "checkbox",
+        "id": "smooth-scroll-enabled",
+        "default": true,
+        "label": "Enable smooth scrolling for browsers that allow it"
+    },
+    {
+        "type": "color",
+        "id": "button-color",
+        "default": "#990055",
+        "label": "Button Color"
+    },
+    {
+        "type": "select",
+        "id": "back-to-top-button-position",
+        "label": "Back-to-Top Button Position",
+        "options": [
+        {
+            "value": "bottom-left",
+            "label": "Bottom Left"
+        },
+        {
+            "value": "bottom-center",
+            "label": "Bottom Center"
+        },
+        {
+            "value": "bottom-right",
+            "label": "Bottom Right"
+        }
+        ],
+        "default": "bottom-center"
+    }
+    ]
+}
+{% endschema %}
