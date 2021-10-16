@@ -1,8 +1,24 @@
 {
-    "sections": {
-      "main": {
-        "type": "main-page-faq"
+  "sections": {
+    "main": {
+      "type": "main-page-faq",
+      "blocks": {
+        "bc94703a-ece3-4f3e-9bf1-457d0c363b19": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you have a question?",
+            "answer": "<p>I have an answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bc94703a-ece3-4f3e-9bf1-457d0c363b19"
+      ],
+      "settings": {
       }
-    },
-    "order": ["main"]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
