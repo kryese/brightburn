@@ -92,6 +92,15 @@
           "enable_language_selector": true,
           "payment_enable": true
         }
+      },
+      "back-to-top-button": {
+        "type": "back-to-top-button",
+        "settings": {
+          "back-to-top-button-enabled": true,
+          "smooth-scroll-enabled": true,
+          "button-color": "#990055",
+          "back-to-top-button-position": "bottom-left"
+        }
       }
     },
     "content_for_index": [
