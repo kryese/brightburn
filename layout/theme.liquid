@@ -128,15 +128,11 @@
 
     {% section 'custom-announcement-bar' %}
 
-    {%- comment -%}
-    {% section 'announcement-bar' %}
-    {%- endcomment -%}
-
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-
+    {% section 'back-to-top-button' %}
     {% section 'footer' %}
 
     <ul hidden>
