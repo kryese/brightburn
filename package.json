@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@shopify/post-purchase-ui-extensions": "^0.13.2",
+    "@shopify/post-purchase-ui-extensions-react": "^0.13.2"
+  },
+  "devDependencies": {
+    "@shopify/checkout-ui-extensions-run": "^0.7.0"
+  }
+}
